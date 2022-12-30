@@ -10,18 +10,26 @@
 * JUnit
 * MySQL
 
-File hierarchy:
+## File hierarchy:
+* src/main/java/com/demo
+  * PocTaskApplication.java
+  * config
+   * AppConfig.java: define beac class and connect to mysql database
+   * WebConfig.java: set some permissions for different pages
+  * controller
+   * UserController: connect with front end with back end, define RESTful APIs
+  * exception
+   * UserAlreadyExistEception.java: check user exist or not
+   * UserNotExistException.java: check user not exist or not 
+  * model
+   * User.java: define a table to communicate with mysql and json format
+  * repository
+   * UserRepository.java: to define a repository with JPA repository in user service
+  * service
+   * UserService.java: deine a service class to communicate with mysql database and implement the real function we do
 
-* src/main/java
-  * User.java: the model that maps to 'User' table in database
-  * UserRepository.java: the data access layer which defines methods(findByEmail in my case)
-  * AppController.java: handles requests from HTML pages, redirect to signup/login page depends on the request received, Dispatches database operations specified in  *   * UserDAO(Create new user with encrypted password using Spring Security technology, retrieve all users)
-  * CustomeUserDetails.java: configuration for authenticated users
-  * CustomerUserDetailsService: Operations that can be peformed on the authenticated users
-  * WebSecurityConfig.java: config login and logout and encrypt the password.
 * src/main/resources
-  * index.html homepage for index
-  * signup_form.html register page for creating new users
-  * register_success.html show the success status after sign-up and with a button to go back to the homepage
-  * users.html a view of user list
+  * register.jsp: register page for creating new users
+  * login.jsp: login page to set permission
+  * update.jsp: update some informations on this page
 
