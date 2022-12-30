@@ -1,7 +1,7 @@
 # POC-project
 > For this project, we can login by login.html with spring security authentication. We can register user with information id, password, first name, last name, email and so on.
 
-##Main technologies: 
+## Main technologies: 
 * Spring Web MVC
 * Spring Data JPA & Hibernate
 * Spring Security
